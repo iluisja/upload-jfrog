@@ -20,12 +20,13 @@ jobs:
           jf intro
           
       - name: Configure JFrog CLI
+        env:
+          JFROG_URL: ${{ secrets.JFROG.URL }}
+          JFROG_USER: ${{ secrets.JFROG_USER }}
+          JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
         run: |
-            jfrog config add my-jfrog \
-            --url=${{ secrets.JFROG_URL }} \
-            --user=${{ secrets.JFROG_USER }} \
-            --password=${{ secrets.JFROG_PASSWORD }}
-            
+          jf config add test --url $JFROG_URL --username $JFROG_USER --password $JFROG_PASSWORD --interactive=false
+
       - name: Ping
         run: jf rt ping
         
