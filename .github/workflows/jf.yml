@@ -26,6 +26,7 @@ jobs:
           JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
         run: |
           jf config add my-server --url ${{ secrets.JFROG.URL }} --user ${{ secrets.JFROG_USER }} --password ${{ secrets.JFROG_PASSWORD }} --interactive=false
+      
       - name: Ping
         run: jf rt ping
         
