@@ -18,12 +18,14 @@ jobs:
           sudo apt update
           sudo apt install -y jfrog-cli-v2-jf
           jf intro
+          
       - name: Configure JFrog CLI
         run: |
             jfrog config add my-jfrog \
             --url=${{ secrets.JFROG_URL }} \
             --user=${{ secrets.JFROG_USER }} \
             --password=${{ secrets.JFROG_PASSWORD }}
+            
       - name: Ping
         run: jf rt ping
         
