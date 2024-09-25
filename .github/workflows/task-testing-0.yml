@@ -1,4 +1,4 @@
-name: task testing inside devbox
+name: task-0 testing inside devbox
 
 on:
   workflow_dispatch:
