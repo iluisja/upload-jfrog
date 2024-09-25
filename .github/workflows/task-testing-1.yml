@@ -1,0 +1,20 @@
+name: task testing inside devbox
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  read:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - uses: jetify-com/devbox-install-action@v0.9.0
+
+      - run: devbox add go-task
+      
+      - run: devbox run task -t Taskfile-1.yml read

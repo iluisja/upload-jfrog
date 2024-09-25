@@ -17,4 +17,4 @@ jobs:
 
       - run: devbox add go-task
       
-      - run: devbox run task greet
+      - run: devbox run task -t Taskfile-0.yml greet
