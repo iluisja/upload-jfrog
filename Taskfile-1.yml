@@ -4,4 +4,4 @@ tasks:
   read:
     desc: ""
     cmds:
-      - echo $NOMBRE
+      - echo $NAME
