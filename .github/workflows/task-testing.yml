@@ -1,0 +1,18 @@
+name: task testing inside devbox
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  greet:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: jetify-com/devbox-install-action@v0.9.0
+
+      - run: devbox run -- echo "Hello World!"
