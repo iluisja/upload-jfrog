@@ -1,4 +1,4 @@
-name: testing
+name: ping to jfrog without devbox and taskfile
 
 on:
   workflow_dispatch:

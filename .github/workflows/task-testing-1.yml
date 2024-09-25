@@ -3,6 +3,9 @@ name: task-1 testing inside devbox
 on:
   workflow_dispatch:
 
+env:
+  NAME: "Luis"
+
 jobs:
 
   read:
